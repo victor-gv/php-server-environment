@@ -10,3 +10,6 @@ $_SESSION['time'] = time();
 echo '<pre>';
 print_r($_SESSION);
 echo '</pre>';
+
+$inipath = php_ini_loaded_file();
+echo $inipath;
