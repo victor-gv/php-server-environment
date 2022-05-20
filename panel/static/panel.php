@@ -1,11 +1,7 @@
 <?php
-	session_start();
+	require_once("../../sessioncontrol.php");
+	$alert = checkSession();
 
-	if(!isset($_SESSION['user'])){
-		header("Location: ./panel.php");
-	} else {
-		$user = $_SESSION['user'];
-	}
 ?>
 
 

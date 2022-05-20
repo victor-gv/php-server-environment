@@ -1,7 +1,8 @@
 <?php
-  if(isset($_GET['error'])){
-    $error=1;
-  }
+  require_once("./sessioncontrol.php");
+
+  $alert = checkSession();
+
 ?>
 
 <!doctype html>
@@ -42,10 +43,9 @@
               <div class="mb-4">
               <h3>Sign In</h3>
 
-              <?php
-                if(isset($error)) echo "<p style='color:red;'>Invalid user or password.</p>";
-                
-                ?>
+              <?= ($alert) ? "<p style='color:red;'>$alert[text]</p>" : "" ?>
+
+
             </div>
             <form action="./validate.php" method="post">
               <div class="form-group first">
