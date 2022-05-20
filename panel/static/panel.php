@@ -1,6 +1,6 @@
 <?php
 	require_once("../../sessioncontrol.php");
-	$alert = checkSession();
+	checkSession();
 
 ?>
 
