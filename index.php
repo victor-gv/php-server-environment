@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="css/owl.carousel.min.css">
+	  <link rel="shortcut icon" href="./panel/static/img/icons/icon-48x48.png"/>
+
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -16,7 +18,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Login #7</title>
+    <title>Login Page</title>
   </head>
   <body>
   
