@@ -22,6 +22,6 @@ if (ini_get("session.use_cookies")) {
 
 // destroy the session
 session_destroy();
-header("Location: index.php?logout=true");
+header("Location: index.php");
 
 ?>
