@@ -1,11 +1,11 @@
 <?php
-	// session_start();
+	session_start();
 
-	// if(!isset($_SESSION['user'])){
-	// 	header("Location: ./index.php");
-	// } else {
-	// 	$user = $_SESSION['user'];
-	// }
+	if(!isset($_SESSION['user'])){
+		header("Location: ./panel.php");
+	} else {
+		$user = $_SESSION['user'];
+	}
 ?>
 
 
@@ -35,7 +35,7 @@
 	<div class="wrapper">
 		<nav id="sidebar" class="sidebar js-sidebar">
 			<div class="sidebar-content js-simplebar">
-				<a class="sidebar-brand" href="index.php">
+				<a class="sidebar-brand" href="panel.php">
           <span class="align-middle">AdminKit</span>
         </a>
 
@@ -45,7 +45,7 @@
 					</li>
 
 					<li class="sidebar-item active">
-						<a class="sidebar-link" href="index.php">
+						<a class="sidebar-link" href="panel.php">
               <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
             </a>
 					</li>
@@ -265,16 +265,19 @@
               </a>
 
 							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
+                <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" />
+				<?php
+					echo '<span class="text-dark">'.$_SESSION['user'].'</span>';
+				?>
               </a>
 							<div class="dropdown-menu dropdown-menu-end">
 								<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
 								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="index.php"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
+								<a class="dropdown-item" href="panel.php"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
 								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#">Log out</a>
+								<a class="dropdown-item" href="../../index.php">Log out</a>
 							</div>
 						</li>
 					</ul>

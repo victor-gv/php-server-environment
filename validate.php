@@ -8,6 +8,8 @@ $user = $_POST['user'];
 $password = $_POST['password'];
 
 if($dbuser == $user && password_verify($password, $dbpasswordEncoded)){
+  session_start();
+  $_SESSION['user'] = $user;
   header("Location: ./panel/static/panel.php");
 } else {
   header("Location: index.php?error=1");
