@@ -1,3 +1,9 @@
+<?php
+  if(isset($_GET['error'])){
+    $error=1;
+  }
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -35,7 +41,11 @@
             <div class="col-md-8">
               <div class="mb-4">
               <h3>Sign In</h3>
-              <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>
+
+              <?php
+                if(isset($error)) echo "<p style='color:red;'>Invalid user or password.</p>";
+                
+                ?>
             </div>
             <form action="./validate.php" method="post">
               <div class="form-group first">

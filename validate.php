@@ -8,7 +8,7 @@ $user = $_POST['user'];
 $password = $_POST['password'];
 
 if($dbuser == $user && password_verify($password, $dbpasswordEncoded)){
-  echo "Welcome, $user";
+  header("Location: ./panel/static/panel.php");
 } else {
-  echo "Wrong username or password";
+  header("Location: index.php?error=1");
 }
